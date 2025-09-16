@@ -1,6 +1,9 @@
-package DSA.LinkedListProblems;
+package DSA.LinkedListProblems.Problem1;
 
 //Given the head of a linked list, remove the nth node from the end of the list and return its head.
+
+import DSA.LinkedListProblems.LinkedListNode;
+import DSA.LinkedListProblems.ListNode;
 
 //Input: head = [1,2,3,4,5], n = 2
 //Output: [1,2,3,5]

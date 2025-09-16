@@ -1,7 +1,7 @@
 package DSA.LinkedListProblems;
 
 public class LinkedListNode {
-    ListNode head;
+    public ListNode head;
 
     public void insert(int data)
     {
