@@ -9,16 +9,16 @@ public class LinearSearch {
         for(int nums:arr){
             if(nums==target){
                 found = 1;
-
                 break;
             }
             index++;
         }
-        if(found!=1){
-            System.out.println("Element Not Found");
+        if(found==1){
+            System.out.println("Element Found "+index);
         }
         else{
-            System.out.println("Element Found "+index);
+
+            System.out.println("Element Not Found");
         }
     }
 }
