@@ -1,7 +1,7 @@
 package DSA.LinkedList;
 
 public class LinkedList {
-    Node head;
+    public Node head;
     public void insert(int data){
         Node node = new Node(data);
 
@@ -72,5 +72,14 @@ public class LinkedList {
             tail.next  = n1.next;
         }
 
+    }
+
+    public void printList() {
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.data + " -> ");
+            temp = temp.next;
+        }
+        System.out.println("null");
     }
 }
