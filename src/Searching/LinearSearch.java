@@ -2,24 +2,20 @@ package Searching;
 
 public class LinearSearch {
     public static void main(String[] args){
-        int[] arr = {2,3,4,5,7,8};
-        int target = 5;
-        int found= -1;
-        int index=0;
-        for(int nums:arr){
-            if(nums==target){
-                found = 1;
-                break;
-            }
-            index++;
-        }
-        if(found==1){
-            System.out.println("Element Found "+index);
-        }
-        else{
+        int arr[] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30};
+       int target = 30;
+       int steps=1;
+       int n=arr.length;
+       for(int i=0;i<n;i++){
+           for(int j=0;j<n/2;j++) {
+               if (target == arr[i]) {
+                   break;
+               }
+           }
+           steps++;
+       }
 
-            System.out.println("Element Not Found");
-        }
+       System.out.println(steps);
     }
 }
 
