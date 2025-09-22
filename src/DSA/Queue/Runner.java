@@ -9,7 +9,7 @@ public class Runner {
         q.enQueue(20);
         q.enQueue(30);
         q.enQueue(40);
-
+        System.out.println(q.deQueue());
         q.show();
     }
 }

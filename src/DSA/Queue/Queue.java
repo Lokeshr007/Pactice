@@ -16,8 +16,16 @@ public class Queue {
     public void show(){
         System.out.println("Elements ");
         for(int i=0;i<size;i++){
-            System.out.print(queue[i]+" ");
+            System.out.print(queue[front+i]+" ");
         }
+    }
+
+    public int deQueue(){
+        int data = queue[front];
+        front = front+1;
+        size=size-1;
+
+        return data;
     }
 
 }
