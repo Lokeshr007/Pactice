@@ -1,8 +1,10 @@
 package DSA.Stack;
 
-public class DynamicStack {
+import static java.lang.Long.expand;
 
-    int stack[] = new int[5];
+public class DynamicStack {
+    int capacity = 2;
+    int stack[] = new int[capacity];
     int top =0;
     public int size(){
         return top;
@@ -12,13 +14,13 @@ public class DynamicStack {
         return top<0;
     }
     public void push(int data){
-        if(top==5){
-            System.out.println("Stack is Full");
+        if(size()==capacity){
+            expand();
         }
-        else {
+
             stack[top] = data;
             top++;
-        }
+
     }
 
     public int pop(){
@@ -30,6 +32,7 @@ public class DynamicStack {
             top--;
             data = stack[top];
             stack[top] = 0;
+            shrink();
         }
         return data;
     }
@@ -46,6 +49,26 @@ public class DynamicStack {
             System.out.print(n+" ");
         }
     }
+    private void shrink(){
+        int length = size();
+        if(length<=(capacity/2)){
+            capacity/=2;
+        }
+        int newStack[] =new int[capacity];
+        System.arraycopy(stack,0,newStack,0,length);
+        stack=newStack;
+
+    }
+
+    private void expand(){
+        int length = size();
+        int newStack[] =  new int[capacity*2];
+        System.arraycopy(stack,0,newStack,0,length);
+        stack = newStack;
+        capacity *=2;
+    }
+
+
 
 
 }

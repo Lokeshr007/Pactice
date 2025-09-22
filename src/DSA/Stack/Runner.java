@@ -2,7 +2,7 @@ package DSA.Stack;
 
 public class Runner {
     public static void main(String[] args){
-        Stack nums = new Stack();
+        DynamicStack nums = new DynamicStack();
         nums.push(1);
         nums.push(2);
         nums.push(3);
