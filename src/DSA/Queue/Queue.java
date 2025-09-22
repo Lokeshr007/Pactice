@@ -10,19 +10,19 @@ public class Queue {
 
     public void enQueue(int data){
         queue[rear]=data;
-        rear = rear+1;
+        rear = rear+1%5;
         size +=1;
     }
     public void show(){
         System.out.println("Elements ");
         for(int i=0;i<size;i++){
-            System.out.print(queue[front+i]+" ");
+            System.out.print(queue[front+i%5]+" ");
         }
     }
 
     public int deQueue(){
         int data = queue[front];
-        front = front+1;
+        front = (front+1)%5;
         size=size-1;
 
         return data;
