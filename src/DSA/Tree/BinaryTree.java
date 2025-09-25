@@ -1,5 +1,7 @@
 package DSA.Tree;
 
+import DSA.Tree.SameTree.SameTree;
+
 public class BinaryTree {
     public Node root;
 
@@ -56,6 +58,7 @@ public class BinaryTree {
             preorderRec(root.right);
         }
     }
+
 
     public void postorder() {
         postorderRec(root);
